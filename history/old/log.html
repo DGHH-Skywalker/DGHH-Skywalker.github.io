@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html class="style-blue-1  custom_fonts comps live_website" lang=""><script>
+    (function() {
+    class RuffleMimeType {
+        constructor(a, b, c) {
+            this.type = a, this.description = b, this.suffixes = c
+        }
+    }
+    class RuffleMimeTypeArray {
+        constructor(a) {
+            this.__mimetypes = [], this.__named_mimetypes = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__mimetypes.length;
+            this.__mimetypes.push(a), this.__named_mimetypes[a.type] = a, this[a.type] = a, this[b] = a
+        }
+        item(a) {
+            return this.__mimetypes[a]
+        }
+        namedItem(a) {
+            return this.__named_mimetypes[a]
+        }
+        get length() {
+            return this.__mimetypes.length
+        }
+    }
+    class RufflePlugin extends RuffleMimeTypeArray {
+        constructor(a, b, c, d) {
+            super(d), this.name = a, this.description = b, this.filename = c
+        }
+        install(a) {
+            a.enabledPlugin || (a.enabledPlugin = this), super.install(a)
+        }
+    }
+    class RufflePluginArray {
+        constructor(a) {
+            this.__plugins = [], this.__named_plugins = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__plugins.length;
+            this.__plugins.push(a), this.__named_plugins[a.name] = a, this[a.name] = a, this[b] = a
+        }
+        item(a) {
+            return this.__plugins[a]
+        }
+        namedItem(a) {
+            return this.__named_plugins[a]
+        }
+        get length() {
+            return this.__plugins.length
+        }
+    }
+    const FLASH_PLUGIN = new RufflePlugin("Shockwave Flash", "Shockwave Flash 32.0 r0", "ruffle.js", [new RuffleMimeType("application/futuresplash", "Shockwave Flash", "spl"), new RuffleMimeType("application/x-shockwave-flash", "Shockwave Flash", "swf"), new RuffleMimeType("application/x-shockwave-flash2-preview", "Shockwave Flash", "swf"), new RuffleMimeType("application/vnd.adobe.flash-movie", "Shockwave Flash", "swf")]);
+
+    function install_plugin(a) {
+        navigator.plugins.install || Object.defineProperty(navigator, "plugins", {
+            value: new RufflePluginArray(navigator.plugins),
+            writable: !1
+        }), navigator.plugins.install(a), 0 < a.length && !navigator.mimeTypes.install && Object.defineProperty(navigator, "mimeTypes", {
+            value: new RuffleMimeTypeArray(navigator.mimeTypes),
+            writable: !1
+        });
+        for (var b = 0; b < a.length; b += 1) navigator.mimeTypes.install(a[b])
+    }
+    install_plugin(FLASH_PLUGIN);
+})();
+</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- This page is running on Unicorn Platform. -->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="../index/main.dd90518d6827.css"><script src="../index/main.008bc4ebd706.js.下载" defer=""></script>
+	
+		<link href="../index/css" rel="stylesheet">
+	
+	
+		<link rel="icon" type="image/png" href="https://ucarecdn.com/8a62037b-020b-424d-86ef-ba535f42d15a/favicon_icon0.png" sizes="16x16">
+	
+	<meta property="og:type" content="website">
+    
+        <title>更新日志</title>
+        <meta property="og:title" content="更新日志">
+        <meta name="twitter:title" content="更新日志">
+    
+    
+	
+  
+  <link href="https://math-work-nnh.unicornplatform.page/log/" rel="canonical"><meta name="twitter:url" content="https://math-work-nnh.unicornplatform.page/log/"><meta property="og:url" content="https://math-work-nnh.unicornplatform.page/log/">
+	
+	
+	
+  
+<style type="text/css">
+.vue-modal-resizer {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 0;
+  bottom: 0;
+  z-index: 9999999;
+  background: transparent;
+  cursor: se-resize;
+}
+.vue-modal-resizer::after {
+  display: block;
+  position: absolute;
+  content: '';
+  background: transparent;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #ddd;
+  border-left: 10px solid transparent;
+}
+.vue-modal-resizer.clicked::after {
+  border-bottom: 10px solid #369be9;
+}
+</style><style type="text/css">
+.v--modal-block-scroll {
+  overflow: hidden;
+  width: 100vw;
+}
+.v--modal-overlay {
+  position: fixed;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  opacity: 1;
+}
+.v--modal-overlay.scrollable {
+  height: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.v--modal-overlay .v--modal-background-click {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+}
+.v--modal-overlay .v--modal-box {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.v--modal-overlay.scrollable .v--modal-box {
+  margin-bottom: 2px;
+}
+.v--modal {
+  background-color: white;
+  text-align: left;
+  border-radius: 3px;
+  box-shadow: 0 20px 60px -2px rgba(27, 33, 58, 0.4);
+  padding: 0;
+}
+.v--modal.v--modal-fullscreen {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  left: 0;
+  top: 0;
+}
+.v--modal-top-right {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.overlay-fade-enter-active,
+.overlay-fade-leave-active {
+  transition: all 0.2s;
+}
+.overlay-fade-enter,
+.overlay-fade-leave-active {
+  opacity: 0;
+}
+.nice-modal-fade-enter-active,
+.nice-modal-fade-leave-active {
+  transition: all 0.4s;
+}
+.nice-modal-fade-enter,
+.nice-modal-fade-leave-active {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+</style><style type="text/css">
+.vue-dialog div {
+  box-sizing: border-box;
+}
+.vue-dialog .dialog-flex {
+  width: 100%;
+  height: 100%;
+}
+.vue-dialog .dialog-content {
+  flex: 1 0 auto;
+  width: 100%;
+  padding: 15px;
+  font-size: 14px;
+}
+.vue-dialog .dialog-c-title {
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+.vue-dialog .dialog-c-text {
+}
+.vue-dialog .vue-dialog-buttons {
+  display: flex;
+  flex: 0 1 auto;
+  width: 100%;
+  border-top: 1px solid #eee;
+}
+.vue-dialog .vue-dialog-buttons-none {
+  width: 100%;
+  padding-bottom: 15px;
+}
+.vue-dialog-button {
+  font-size: 12px !important;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+  line-height: 40px;
+  height: 40px;
+  color: inherit;
+  font: inherit;
+  outline: none;
+}
+.vue-dialog-button:hover {
+  background: rgba(0, 0, 0, 0.01);
+}
+.vue-dialog-button:active {
+  background: rgba(0, 0, 0, 0.025);
+}
+.vue-dialog-button:not(:first-of-type) {
+  border-left: 1px solid #eee;
+}
+</style><style type="text/css"></style></head>
+
+<body class="font-lato comps body--desktop body--loaded" id="61322-132989">
+
+    
+	
+	
+
+
+
+	<nav class="js-nav nav-02 nav-02--static">
+		<div class="container container--large">
+			<div class="nav-02__box">
+				<div class="nav-02__logo"><a class="nav-02__link" href="https://math-work-nnh.unicornplatform.page/" target="_self">
+					
+						<img loading="lazy" class="nav-02__logo_img" src="../index/logo.jpg" height="30" alt="Logo">
+					
+					
+						<span class="nav-02__logo_text ">Skywalker</span>
+					
+				</a></div>
+				<div class="nav-02__links js-menu">
+					<div class="nav-02__list_wrapper  ">
+						<ul class="nav-02__list nav-02__list--desktop">
+                        
+                        
+                            
+
+
+    
+        
+            
+                <li class="nav-02__item">
+                    
+                        <a class="button   button--black-outline  button--empty " href="https://math-work-nnh.unicornplatform.page/eganbrawl/" target="_self"><span class="button__text">主页</span>
+                            </a>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li class="nav-02__item">
+                    
+                        <a class="button   button--black-outline  button--empty " href="https://www.123pan.com/s/1ZG9-vuWBd" target="_self"><span class="button__text">下载站</span>
+                            </a>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li class="nav-02__item">
+                    
+                        <a class="button   button--black-outline  button--empty " href="https://math-work-nnh.unicornplatform.page/log/" target="_self"><span class="button__text">更新日志</span>
+                            </a>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li class="nav-02__item">
+                    
+                        <a class="button   button--black-outline  button--empty " href="https://space.bilibili.com/352075146?spm_id_from=333.1007.0.0" target="_self"><span class="button__text">个人主页</span>
+                            </a>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li class="nav-02__item">
+                    
+                        <a class="button   button--black-outline  button--empty " href="https://math-work-nnh.unicornplatform.page/other/" target="_self"><span class="button__text">其他项目</span>
+                            </a>
+                    
+                </li>
+            
+        
+    
+
+                        
+							<li class="nav-02__item">
+								
+	
+
+
+							</li>
+						</ul>
+						<ul class="nav-02__list nav-02__list--mobile">
+                            
+                            
+                                
+
+
+    
+        
+            
+                <li class="nav-02__item">
+                    
+                        <a class="button   button--black-outline  button--empty " href="https://math-work-nnh.unicornplatform.page/eganbrawl/" target="_self"><span class="button__text">主页</span>
+                            </a>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li class="nav-02__item">
+                    
+                        <a class="button   button--black-outline  button--empty " href="https://www.123pan.com/s/1ZG9-vuWBd" target="_self"><span class="button__text">下载站</span>
+                            </a>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li class="nav-02__item">
+                    
+                        <a class="button   button--black-outline  button--empty " href="https://math-work-nnh.unicornplatform.page/log/" target="_self"><span class="button__text">更新日志</span>
+                            </a>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li class="nav-02__item">
+                    
+                        <a class="button   button--black-outline  button--empty " href="https://space.bilibili.com/352075146?spm_id_from=333.1007.0.0" target="_self"><span class="button__text">个人主页</span>
+                            </a>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li class="nav-02__item">
+                    
+                        <a class="button   button--black-outline  button--empty " href="https://math-work-nnh.unicornplatform.page/other/" target="_self"><span class="button__text">其他项目</span>
+                            </a>
+                    
+                </li>
+            
+        
+    
+
+                            
+							<li class="nav-02__item">
+								
+	
+
+
+							</li>
+						</ul>
+					</div>
+          
+            
+              <div class="nav-02__burger">
+	<button class="burger burger--black js-open-menu" type="button">
+		<div class="burger__box">
+			<div class="burger__inner"></div>
+		</div>
+	</button>
+</div>
+            
+          
+				</div>
+			</div>
+		</div>
+	</nav>
+
+
+
+  
+  
+  
+  
+	<div class="page-component__bg_image_box    bg-white-color  first_component   " id="code-01-44201">
+		
+  
+		<div class="page-component__bg_overlay_box " %%="">
+			
+		</div>
+    
+		<div class="page-component__wrapper" style="z-index: 10;padding-top:50px;padding-bottom:60px;">
+			
+	
+	
+
+	<section>
+		<div class="code-01">
+			
+
+
+	
+	
+	<div class="container container--small">
+		<div class="title-box title-box--center">
+			
+				
+					<h1 class="heading ">更新日志</h1>
+				
+			
+			
+				<div class="title-box__text content_box "><h2>2.1.2</h2>
+<p><a href="https://vdse.bdstatic.com//192d9a98d782d9c74c96f09db9378d93.mp4" target="_self">立即被骗 </a>&nbsp;</p>
+<p>1.暂无更新</p>
+<h2>2.1.1</h2>
+<p><a href="https://www.123pan.com/s/1ZG9-vuWBd" target="_self">立即下载 </a>&nbsp;</p>
+<p>1.更多的渠道服版本&nbsp;</p>
+<p>2.为大部分英雄添加了特殊表情&nbsp;</p>
+<p>3.超酷皮肤-瑟奇·瑞科登场&nbsp;</p>
+<p>4.皮肤更新&nbsp;</p>
+<p>5.体验优化&nbsp;</p>
+<p>6.鹅肝铺子精简为鹅肝盒子&nbsp;</p>
+<p>7.loading界面重制&nbsp;</p>
+<p>8.取消友谊战多余模式&nbsp;</p>
+<p>9.还原地图编辑器至默认版本&nbsp;</p>
+<h2>2.1.0</h2>
+<p><a href="https://www.123pan.com/s/1ZG9-vuWBd" target="_self">立即下载</a>&nbsp;</p>
+<p>1.更多的渠道服版本&nbsp;</p>
+<p>2.为大部分英雄添加了特殊表情&nbsp;</p>
+<p>3.皮肤更新&nbsp;</p>
+<p>4.体验优化&nbsp;</p>
+<p>5.鹅肝铺子精简为鹅肝盒子&nbsp;</p>
+<p>6.loading界面重制&nbsp;</p>
+<p>7.设置中添加了些许没啥用的东西&nbsp;</p>
+<p>&nbsp;此版本不更新，部分内容将集成到2.1.1中</p>
+<h2>2.0.0</h2>
+<p><a href="https://www.123pan.com/s/1ZG9-JKWBd" target="_self">立即下载</a>&nbsp;</p>
+<p>1.全英雄皮肤修改，持续轮换&nbsp;</p>
+<p>2.解禁一些头像，但是只能自己看到&nbsp;</p>
+<p>3.地图编辑器多了点奇奇怪怪的建筑&nbsp;</p>
+<p>4.隐藏表情和隐藏快捷消息（仅聊天界面可用）&nbsp;</p>
+<p>5.友谊战推荐更多模式&nbsp;</p>
+<p>6.星光模式可以ban格斯</p>
+<p>7.能看到废稿星辉妙具&nbsp;</p>
+<p>8.纳尼开大能走路&nbsp;</p>
+<p>9.阿方纳尼辅助线已更改&nbsp;</p>
+<p>10.比官方版本更小的体积，后续会越更新越小&nbsp;</p>
+<h3>&nbsp;1.x版本已不提供下载</h3>
+<p></p>
+<h2><del>1.1.9</del></h2>
+<p>1.地图编辑器添加了许多模式，但是只能看看，玩不了</p>
+<p>2.修改了一堆皮肤（挑战者柯尔特、魔女雪莉、宗师巴利、暗行御史柯尔特、刀客莫提斯等）</p>
+<p>3.比比皮肤替换为勇者比比（大刀会转哈哈哈）沙迪皮肤替换为神灯沙迪（普攻特效有bug，所以我改成了原皮的）</p>
+<p>4.此版本不提供下载（bug太多了！！！！！！敬请期待全新2.x版本）</p>
+<p>bug过多，改的有点废，决定直接基于官方安装包从头改起</p>
+<h2><del>1.1.0</del></h2>
+<p>&nbsp;1.修了些许的bug（机器人工厂场景黑屏问题）&nbsp;</p>
+<h2><del><strong>1.0.0</strong></del></h2>
+<p>鹅肝乱斗重磅发布！</p>
+<p>修改列表：</p>
+<p>1.BT21全系皮肤</p>
+<p>（公牛、拉夫、沙迪、埃德加、雅琪、迪克、比比）</p>
+<p>其中比比、沙迪的皮肤特效出现异常，</p>
+<p>目前暂无解决方案，未来将会用其他皮肤代替</p>
+<p>2.机器人工厂场景，并应用至部分地图，包括吃鸡地图</p>
+<p>3.大厅场景修改</p>
+</div>
+			
+		</div>
+	</div>
+
+			<div class="code-01__container container container--mid js-github-gist-container">
+				<script src="./更新日志_files/js"></script>
+			</div>
+			<div class="container">
+				<div class="bottom_cta">
+					
+	
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+		</div>
+	</div>
+</div>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="pswp__bg"></div>
+	<div class="pswp__scroll-wrap">
+		<div class="pswp__container">
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+		</div>
+		<div class="pswp__ui pswp__ui--hidden">
+			<div class="pswp__top-bar">
+				<div class="pswp__counter"></div>
+				<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+				<button class="pswp__button pswp__button--share" title="Share"></button>
+				<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+				<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+				<div class="pswp__preloader">
+					<div class="pswp__preloader__icn">
+						<div class="pswp__preloader__cut">
+							<div class="pswp__preloader__donut"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+				<div class="pswp__share-tooltip"></div>
+			</div>
+			<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+			<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+			<div class="pswp__caption">
+				<div class="pswp__caption__center"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<style>
+	.page-component__bg_image_box .page-component__bg_image_box .page-component__bg_overlay_box {
+        position: relative;
+	}
+	body .page-component__bg_overlay_box {
+		position: absolute;
+	}
+    .footer-02__text.content_box a{
+    	color: inherit !important;
+    }
+    .footer-04__info{
+	    font-size: 14px;
+    }
+</style>
+
+
+
+
+
+
+
+<div data-flash-app-container="true" id="flash_player_app_root"></div></body></html>
