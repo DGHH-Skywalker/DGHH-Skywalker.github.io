@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐播放器插件</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <style type="text/css">
+        #main{
+            width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="aplayer"></div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script>
+  var ap = new APlayer({
+      element: document.getElementById('aplayer'),
+      narrow: false,
+      /*自动播放，默认值为false，true为开启自动播放*/
+      autoplay: true,
+      showlrc: true,
+      /*lrc歌词显示方式,默认值为1,HTML显示方式，2为JavaScript字符串显示方式，3为lrc文件加载显示方式*/
+      lrcType: 3,
+      /*主题颜色*/
+      theme: '#00b5ad',
+      /*歌曲集合列表*/
+  audio: [
+        {
+            name: '写给我第一个喜欢的女孩的歌',
+            artist: '洛天依',
+            url: './html1/1.mp3',
+            cover: 'cov1.webp',
+            lrc: 'https://mp-54ead708-5e05-4ba5-9ac9-67a0c9e01b75.cdn.bspapp.com/cloudstorage/62e9e78b-8a63-4341-80b7-60521876f4e7.lrc',
+            theme: '#ebd0c2'
+        },
+        {
+            name: 'name2',
+            artist: 'artist2',
+            url: 'url2.mp3',
+            cover: 'cover2.jpg',
+            lrc: 'lrc2.lrc',
+            theme: '#46718b'
+        }
+    ]
+  });
+</script>
+</body>
+</html>
