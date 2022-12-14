@@ -237,6 +237,10 @@
 .vue-dialog-button:not(:first-of-type) {
   border-left: 1px solid #eee;
 }
+.baisezi{
+  font-size: 50px ;
+
+}
 </style><style type="text/css"></style></head>
 <body class="d-flex h-100 text-center text-white bg-dark">
 <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -244,12 +248,16 @@
 <div>
 <nav class="nav nav-masthead justify-content-center float-md-end">
 <a class="nav-link "href="../">主页</a>
-<a class="nav-link active" aria-current="page">暂未上线</a>
+
+<a class="nav-link active" aria-current="page">百度一下</a>
+
 </nav>
 </div>
 </header>
 <main class="px-3">
-<h2 class="lead">此页面暂无内容</h2>
+<form action="https://www.baidu.com/s">
+            <input type="text" name="wd" class="btn  btn-secondary fw-bold border-white bg-white"/><input type="submit" class="btn fw-bold border-white bg-white"  value="百度一下"/>
+        </form>
 </main>
 <footer class="mt-auto text-white-50">
 </footer>
